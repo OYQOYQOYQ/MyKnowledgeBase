@@ -1,0 +1,10 @@
+.obsidian/
+.idea/
+.vscode/
+.Ds_Store
+
+*.exe
+*.dll
+*.pdb
+*.ilk
+*.obj
