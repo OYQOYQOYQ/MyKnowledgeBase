@@ -1,0 +1,77 @@
+<svg width="800" height="600" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .title { font: bold 24px sans-serif; fill: #333; }
+    .heading { font: bold 18px sans-serif; fill: #555; }
+    .subheading { font: bold 16px sans-serif; fill: #777; }
+    .text { font: 14px sans-serif; fill: #444; }
+    .box { stroke: #ccc; stroke-width: 1; fill: #f9f9f9; rx: 8; ry: 8; }
+    .arrow { stroke: #888; stroke-width: 2; marker-end: url(#arrowhead); fill: none; }
+    .concept-box { stroke: #6a0dad; stroke-width: 2; fill: #e6d9f2; rx: 8; ry: 8; }
+    .feature-box { stroke: #0d6a0d; stroke-width: 1; fill: #d9f2d9; rx: 5; ry: 5; }
+    .example-box { stroke: #0d0d6a; stroke-width: 1; fill: #d9d9f2; rx: 5; ry: 5; }
+  </style>
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#888" />
+    </marker>
+  </defs>
+
+  <rect x="10" y="10" width="780" height="580" class="box" />
+
+  <text x="400" y="40" text-anchor="middle" class="title">Unity 工具栏和父子关系</text>
+
+  <!-- Unity 编辑器工具栏 -->
+  <rect x="30" y="70" width="360" height="250" class="concept-box" />
+  <text x="210" y="90" text-anchor="middle" class="heading">1. Unity 编辑器工具栏</text>
+
+  <rect x="40" y="110" width="160" height="60" class="feature-box" />
+  <text x="120" y="125" text-anchor="middle" class="subheading">变换工具</text>
+  <text x="120" y="145" text-anchor="middle" class="text">(Hand, Move, Rotate, Scale, Rect)</text>
+
+  <rect x="220" y="110" width="160" height="60" class="feature-box" />
+  <text x="300" y="125" text-anchor="middle" class="subheading">轴心/中心 &amp; 局部/全局</text>
+  <text x="300" y="145" text-anchor="middle" class="text">(Pivot/Center, Local/Global)</text>
+
+  <rect x="40" y="180" width="160" height="40" class="feature-box" />
+  <text x="120" y="205" text-anchor="middle" class="subheading">播放/暂停/步进</text>
+
+  <rect x="220" y="180" width="160" height="40" class="feature-box" />
+  <text x="300" y="205" text-anchor="middle" class="subheading">层级下拉菜单</text>
+
+  <rect x="40" y="230" width="160" height="40" class="feature-box" />
+  <text x="120" y="255" text-anchor="middle" class="subheading">布局下拉菜单</text>
+
+  <!-- 父子关系 -->
+  <rect x="410" y="70" width="360" height="500" class="concept-box" />
+  <text x="590" y="90" text-anchor="middle" class="heading">2. 父子关系 (Parent-Child Relationship)</text>
+
+  <text x="590" y="120" text-anchor="middle" class="subheading">2.1 概念</text>
+  <rect x="420" y="140" width="160" height="40" class="feature-box" />
+  <text x="500" y="165" text-anchor="middle" class="text">父对象 (Parent Object)</text>
+  <rect x="600" y="140" width="160" height="40" class="feature-box" />
+  <text x="680" y="165" text-anchor="middle" class="text">子对象 (Child Object)</text>
+
+  <text x="590" y="200" text-anchor="middle" class="subheading">2.2 特性</text>
+  <rect x="420" y="220" width="340" height="80" class="feature-box" />
+  <text x="590" y="235" text-anchor="middle" class="text">变换继承 (Transform Inheritance)</text>
+  <text x="590" y="255" text-anchor="middle" class="text">(位置, 旋转, 缩放)</text>
+  <text x="590" y="275" text-anchor="middle" class="text">子对象变换相对于父对象</text>
+
+  <rect x="420" y="310" width="340" height="40" class="feature-box" />
+  <text x="590" y="335" text-anchor="middle" class="text">组织和管理 (Organization and Management)</text>
+
+  <rect x="420" y="360" width="340" height="40" class="feature-box" />
+  <text x="590" y="385" text-anchor="middle" class="text">实例化 (Instantiation)</text>
+
+  <text x="590" y="420" text-anchor="middle" class="subheading">2.3 创建父子关系</text>
+  <rect x="420" y="440" width="340" height="40" class="feature-box" />
+  <text x="590" y="465" text-anchor="middle" class="text">Hierarchy 窗口中拖拽</text>
+
+  <text x="590" y="500" text-anchor="middle" class="subheading">2.4 示例</text>
+  <rect x="420" y="520" width="340" height="40" class="example-box" />
+  <text x="590" y="545" text-anchor="middle" class="text">角色模型 (身体-父, 头部/手臂-子)</text>
+
+  <!-- Arrows -->
+  <path d="M210 320 L210 350 L500 350 L500 410" class="arrow" />
+  <text x="210" y="340" class="text">影响</text>
+</svg>

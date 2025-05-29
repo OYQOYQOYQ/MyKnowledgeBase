@@ -1,0 +1,133 @@
+<svg width="800" height="600" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#6DD5FA;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2980B9;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFD700;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FFA500;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="grad3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#A770EF;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#CF8BF3;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="grad4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#83A4D4;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#BDD4E7;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="grad5" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FF6B6B;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#EE4266;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="3" dy="3" stdDeviation="3" flood-color="#000" flood-opacity="0.3"/>
+    </filter>
+    <style>
+      .title { font: bold 36px 'Arial', sans-serif; fill: #333; text-anchor: middle; filter: url(#shadow); }
+      .operator-box { fill: url(#grad1); stroke: #2980B9; stroke-width: 2; rx: 15; ry: 15; filter: url(#shadow); }
+      .operator-text { font: bold 28px 'Consolas', monospace; fill: #FFF; text-anchor: middle; alignment-baseline: middle; }
+      .description-text { font: 18px 'Arial', sans-serif; fill: #555; text-anchor: start; }
+      .example-code { font: 16px 'Consolas', monospace; fill: #333; text-anchor: start; }
+      .section-title { font: bold 24px 'Arial', sans-serif; fill: #444; text-anchor: start; }
+      .arrow { stroke: #666; stroke-width: 2; marker-end: url(#arrowhead); }
+      .note-box { fill: url(#grad2); stroke: #FFA500; stroke-width: 2; rx: 10; ry: 10; filter: url(#shadow); }
+      .note-text { font: 16px 'Arial', sans-serif; fill: #333; text-anchor: start; }
+      .increment-box { fill: url(#grad3); stroke: #CF8BF3; stroke-width: 2; rx: 10; ry: 10; filter: url(#shadow); }
+      .increment-text { font: bold 20px 'Consolas', monospace; fill: #FFF; text-anchor: middle; alignment-baseline: middle; }
+      .priority-box { fill: url(#grad4); stroke: #BDD4E7; stroke-width: 2; rx: 10; ry: 10; filter: url(#shadow); }
+      .priority-text { font: 16px 'Arial', sans-serif; fill: #333; text-anchor: start; }
+      .compound-box { fill: url(#grad5); stroke: #EE4266; stroke-width: 2; rx: 10; ry: 10; filter: url(#shadow); }
+      .compound-text { font: bold 20px 'Consolas', monospace; fill: #FFF; text-anchor: middle; alignment-baseline: middle; }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#666" />
+    </marker>
+  </defs>
+
+  <text x="400" y="50" class="title">C# 算术运算符概念图</text>
+
+  <!-- Basic Arithmetic Operators -->
+  <rect x="50" y="90" width="700" height="180" class="operator-box" />
+  <text x="60" y="115" class="section-title">基本算术运算符</text>
+
+  <g transform="translate(70, 140)">
+    <text x="0" y="0" class="operator-text">+</text>
+    <text x="0" y="30" class="description-text">加法</text>
+    <text x="0" y="55" class="example-code">10 + 3 = 13</text>
+  </g>
+  <g transform="translate(180, 140)">
+    <text x="0" y="0" class="operator-text">-</text>
+    <text x="0" y="30" class="description-text">减法</text>
+    <text x="0" y="55" class="example-code">10 - 3 = 7</text>
+  </g>
+  <g transform="translate(290, 140)">
+    <text x="0" y="0" class="operator-text">*</text>
+    <text x="0" y="30" class="description-text">乘法</text>
+    <text x="0" y="55" class="example-code">10 * 3 = 30</text>
+  </g>
+  <g transform="translate(400, 140)">
+    <text x="0" y="0" class="operator-text">/</text>
+    <text x="0" y="30" class="description-text">除法</text>
+    <text x="0" y="55" class="example-code">10 / 3 = 3 (int)</text>
+  </g>
+  <g transform="translate(510, 140)">
+    <text x="0" y="0" class="operator-text">%</text>
+    <text x="0" y="30" class="description-text">取余</text>
+    <text x="0" y="55" class="example-code">10 % 3 = 1</text>
+  </g>
+
+  <!-- Division by Zero Note -->
+  <rect x="50" y="280" width="340" height="80" class="note-box" />
+  <text x="60" y="305" class="section-title">除以零注意事项</text>
+  <text x="60" y="330" class="note-text">整数除以零: 抛出异常</text>
+  <text x="60" y="350" class="note-text">浮点数除以零: Infinity / NaN</text>
+
+  <!-- Increment/Decrement Operators -->
+  <rect x="410" y="280" width="340" height="140" class="increment-box" />
+  <text x="420" y="305" class="section-title">递增/递减运算符</text>
+  <g transform="translate(430, 330)">
+    <text x="0" y="0" class="increment-text">++var (前缀)</text>
+    <text x="0" y="25" class="note-text">先改变，后使用</text>
+  </g>
+  <g transform="translate(600, 330)">
+    <text x="0" y="0" class="increment-text">var++ (后缀)</text>
+    <text x="0" y="25" class="note-text">先使用，后改变</text>
+  </g>
+
+  <!-- Operator Precedence -->
+  <rect x="50" y="370" width="340" height="180" class="priority-box" />
+  <text x="60" y="395" class="section-title">运算符优先级</text>
+  <text x="60" y="420" class="priority-text">1. 后缀 ++, --</text>
+  <text x="60" y="440" class="priority-text">2. 前缀 ++, --, 一元 +, -</text>
+  <text x="60" y="460" class="priority-text">3. *, /, % (左结合)</text>
+  <text x="60" y="480" class="priority-text">4. +, - (左结合)</text>
+  <text x="60" y="500" class="priority-text">使用 () 改变优先级</text>
+  <text x="60" y="525" class="example-code">5 + 3 * 2 = 11</text>
+  <text x="60" y="545" class="example-code">(5 + 3) * 2 = 16</text>
+
+  <!-- Compound Assignment Operators -->
+  <rect x="410" y="430" width="340" height="120" class="compound-box" />
+  <text x="420" y="455" class="section-title">复合赋值运算符</text>
+  <g transform="translate(430, 480)">
+    <text x="0" y="0" class="compound-text">+=</text>
+    <text x="0" y="25" class="note-text">x += y  -> x = x + y</text>
+  </g>
+  <g transform="translate(550, 480)">
+    <text x="0" y="0" class="compound-text">-=</text>
+    <text x="0" y="25" class="note-text">x -= y  -> x = x - y</text>
+  </g>
+  <g transform="translate(670, 480)">
+    <text x="0" y="0" class="compound-text">*=</text>
+    <text x="0" y="25" class="note-text">x *= y  -> x = x * y</text>
+  </g>
+  <g transform="translate(430, 520)">
+    <text x="0" y="0" class="compound-text">/=</text>
+    <text x="0" y="25" class="note-text">x /= y  -> x = x / y</text>
+  </g>
+  <g transform="translate(550, 520)">
+    <text x="0" y="0" class="compound-text">%=</text>
+    <text x="0" y="25" class="note-text">x %= y  -> x = x % y</text>
+  </g>
+
+</svg>

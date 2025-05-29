@@ -1,0 +1,64 @@
+<svg width="800" height="700" viewBox="0 0 800 700" xmlns="http://www.w3.org/2000/svg">
+  <rect x="0" y="0" width="800" height="700" fill="#f8f8f8"/>
+
+  <!-- Title -->
+  <text x="400" y="50" font-family="Arial, sans-serif" font-size="32" fill="#333" text-anchor="middle" font-weight="bold">C# 隐式转换概念图</text>
+
+  <!-- Main Concept: Implicit Conversion -->
+  <rect x="250" y="90" width="300" height="60" rx="10" ry="10" fill="#66bb6a" stroke="#388e3c" stroke-width="2"/>
+  <text x="400" y="130" font-family="Arial, sans-serif" font-size="24" fill="#fff" text-anchor="middle" font-weight="bold">隐式转换 (Implicit Conversion)</text>
+
+  <!-- Definition -->
+  <rect x="100" y="180" width="600" height="80" rx="8" ry="8" fill="#e0f2f1" stroke="#00796b" stroke-width="1"/>
+  <text x="400" y="210" font-family="Arial, sans-serif" font-size="18" fill="#333" text-anchor="middle">编译器自动执行的类型转换，无需程序员显式指定</text>
+  <text x="400" y="235" font-family="Arial, sans-serif" font-size="18" fill="#333" text-anchor="middle">通常发生在将小范围类型赋值给大范围类型时，安全且不丢失数据</text>
+
+  <!-- Arrows from Main Concept to Characteristics -->
+  <line x1="400" y1="150" x2="400" y2="180" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+  <!-- Characteristics Section -->
+  <text x="400" y="290" font-family="Arial, sans-serif" font-size="22" fill="#333" text-anchor="middle" font-weight="bold">特点</text>
+  <rect x="50" y="310" width="700" height="50" rx="8" ry="8" fill="#bbdefb" stroke="#1976d2" stroke-width="1"/>
+  <text x="400" y="340" font-family="Arial, sans-serif" font-size="18" fill="#1976d2" text-anchor="middle">自动执行 | 安全转换 (不丢失数据) | 编译时检查 | 单向性 (小范围 → 大范围)</text>
+
+  <!-- Types of Implicit Conversion -->
+  <text x="400" y="400" font-family="Arial, sans-serif" font-size="22" fill="#333" text-anchor="middle" font-weight="bold">常见隐式转换类型</text>
+
+  <!-- Numeric Types -->
+  <rect x="50" y="430" width="220" height="100" rx="8" ry="8" fill="#c8e6c9" stroke="#388e3c" stroke-width="1"/>
+  <text x="160" y="455" font-family="Arial, sans-serif" font-size="18" fill="#388e3c" text-anchor="middle" font-weight="bold">数值类型</text>
+  <text x="160" y="480" font-family="Arial, sans-serif" font-size="16" fill="#333" text-anchor="middle">int → long</text>
+  <text x="160" y="505" font-family="Arial, sans-serif" font-size="16" fill="#333" text-anchor="middle">float → double</text>
+
+  <!-- Character Types -->
+  <rect x="290" y="430" width="220" height="100" rx="8" ry="8" fill="#ffccbc" stroke="#d32f2f" stroke-width="1"/>
+  <text x="400" y="455" font-family="Arial, sans-serif" font-size="18" fill="#d32f2f" text-anchor="middle" font-weight="bold">字符类型</text>
+  <text x="400" y="480" font-family="Arial, sans-serif" font-size="16" fill="#333" text-anchor="middle">char → int (ASCII)</text>
+  <text x="400" y="505" font-family="Arial, sans-serif" font-size="16" fill="#333" text-anchor="middle">char → double</text>
+
+  <!-- Reference Types (Inheritance/Interface) -->
+  <rect x="530" y="430" width="220" height="100" rx="8" ry="8" fill="#fff9c4" stroke="#fbc02d" stroke-width="1"/>
+  <text x="640" y="455" font-family="Arial, sans-serif" font-size="18" fill="#fbc02d" text-anchor="middle" font-weight="bold">引用类型</text>
+  <text x="640" y="480" font-family="Arial, sans-serif" font-size="16" fill="#333" text-anchor="middle">派生类 → 基类</text>
+  <text x="640" y="505" font-family="Arial, sans-serif" font-size="16" fill="#333" text-anchor="middle">实现类 → 接口</text>
+
+  <!-- Other Types -->
+  <rect x="50" y="550" width="220" height="80" rx="8" ry="8" fill="#e1bee7" stroke="#8e24aa" stroke-width="1"/>
+  <text x="160" y="575" font-family="Arial, sans-serif" font-size="18" fill="#8e24aa" text-anchor="middle" font-weight="bold">常量表达式</text>
+  <text x="160" y="600" font-family="Arial, sans-serif" font-size="16" fill="#333" text-anchor="middle">值在目标类型范围内</text>
+
+  <rect x="290" y="550" width="220" height="80" rx="8" ry="8" fill="#b2dfdb" stroke="#00897b" stroke-width="1"/>
+  <text x="400" y="575" font-family="Arial, sans-serif" font-size="18" fill="#00897b" text-anchor="middle" font-weight="bold">可空类型</text>
+  <text x="400" y="600" font-family="Arial, sans-serif" font-size="16" fill="#333" text-anchor="middle">值类型 → 可空类型</text>
+
+  <rect x="530" y="550" width="220" height="80" rx="8" ry="8" fill="#d1c4e9" stroke="#5e35b1" stroke-width="1"/>
+  <text x="640" y="575" font-family="Arial, sans-serif" font-size="18" fill="#5e35b1" text-anchor="middle" font-weight="bold">用户定义转换</text>
+  <text x="640" y="600" font-family="Arial, sans-serif" font-size="16" fill="#333" text-anchor="middle">需谨慎定义</text>
+
+  <!-- Arrowhead Definition -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#666"/>
+    </marker>
+  </defs>
+</svg>

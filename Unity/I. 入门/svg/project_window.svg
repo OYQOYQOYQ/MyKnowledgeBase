@@ -1,0 +1,44 @@
+<svg width="800" height="450" xmlns="http://www.w3.org/2000/svg">
+ <rect width="100%" height="100%" fill="#282828"/>
+ <text x="400" y="30" font-family="Arial" font-size="20" fill="#ffffff" text-anchor="middle">Unity Project 窗口示意图</text>
+
+ <!-- Project Window Outline -->
+ <rect x="50" y="50" width="700" height="350" fill="#3c3c3c" stroke="#555555" stroke-width="2"/>
+
+ <!-- Toolbar -->
+ <rect x="50" y="50" width="700" height="30" fill="#4a4a4a" stroke="#555555" stroke-width="1"/>
+ <text x="60" y="70" font-family="Arial" font-size="14" fill="#cccccc">Create</text>
+ <rect x="120" y="55" width="200" height="20" fill="#5a5a5a" rx="3" ry="3"/>
+ <text x="220" y="70" font-family="Arial" font-size="14" fill="#cccccc" text-anchor="middle">Search Assets</text>
+ <rect x="650" y="55" width="90" height="20" fill="#5a5a5a" rx="3" ry="3"/>
+ <text x="695" y="70" font-family="Arial" font-size="14" fill="#cccccc" text-anchor="middle">Slider</text>
+
+ <!-- Left Pane (Folders) -->
+ <rect x="50" y="80" width="180" height="320" fill="#333333" stroke="#555555" stroke-width="1"/>
+ <text x="60" y="100" font-family="Arial" font-size="14" fill="#cccccc">▼ Assets</text>
+ <text x="75" y="120" font-family="Arial" font-size="14" fill="#cccccc">  ► Audio</text>
+ <text x="75" y="140" font-family="Arial" font-size="14" fill="#cccccc">  ► Materials</text>
+ <text x="75" y="160" font-family="Arial" font-size="14" fill="#cccccc">  ► Models</text>
+ <text x="75" y="180" font-family="Arial" font-size="14" fill="#cccccc">  ► Prefabs</text>
+ <text x="75" y="200" font-family="Arial" font-size="14" fill="#cccccc">  ► Scenes</text>
+ <text x="75" y="220" font-family="Arial" font-size="14" fill="#cccccc">  ► Scripts</text>
+ <text x="75" y="240" font-family="Arial" font-size="14" fill="#cccccc">  ► Textures</text>
+ <text x="75" y="260" font-family="Arial" font-size="14" fill="#cccccc">  ► UI</text>
+
+ <!-- Right Pane (Files) -->
+ <rect x="230" y="80" width="520" height="320" fill="#2d2d2d" stroke="#555555" stroke-width="1"/>
+ <text x="240" y="100" font-family="Arial" font-size="14" fill="#cccccc">Main Scene.unity</text>
+ <text x="240" y="120" font-family="Arial" font-size="14" fill="#cccccc">PlayerController.cs</text>
+ <text x="240" y="140" font-family="Arial" font-size="14" fill="#cccccc">Cube.fbx</text>
+ <text x="240" y="160" font-family="Arial" font-size="14" fill="#cccccc">GroundTexture.png</text>
+ <text x="240" y="180" font-family="Arial" font-size="14" fill="#cccccc">Material_Red.mat</text>
+
+ <!-- Favorites Bar -->
+ <rect x="50" y="400" width="700" height="30" fill="#4a4a4a" stroke="#555555" stroke-width="1"/>
+ <text x="60" y="420" font-family="Arial" font-size="14" fill="#cccccc">Favorites:</text>
+ <rect x="130" y="405" width="80" height="20" fill="#5a5a5a" rx="3" ry="3"/>
+ <text x="170" y="420" font-family="Arial" font-size="14" fill="#cccccc" text-anchor="middle">Scenes</text>
+ <rect x="220" y="405" width="80" height="20" fill="#5a5a5a" rx="3" ry="3"/>
+ <text x="260" y="420" font-family="Arial" font-size="14" fill="#cccccc" text-anchor="middle">Scripts</text>
+
+</svg>

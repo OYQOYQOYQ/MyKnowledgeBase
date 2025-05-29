@@ -1,0 +1,71 @@
+<svg width="800" height="800" viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg">
+  <rect x="0" y="0" width="800" height="800" fill="#f8f8f8"/>
+
+  <!-- Title -->
+  <text x="400" y="50" font-family="Arial, sans-serif" font-size="32" fill="#333" text-anchor="middle" font-weight="bold">C# 异常捕获概念图</text>
+
+  <!-- Main Concept: Exception Handling -->
+  <rect x="200" y="90" width="400" height="60" rx="10" ry="10" fill="#4CAF50" stroke="#388E3C" stroke-width="2"/>
+  <text x="400" y="130" font-family="Arial, sans-serif" font-size="24" fill="#fff" text-anchor="middle" font-weight="bold">异常捕获 (Exception Handling)</text>
+
+  <!-- Definition -->
+  <rect x="100" y="180" width="600" height="80" rx="8" ry="8" fill="#E8F5E9" stroke="#81C784" stroke-width="1"/>
+  <text x="400" y="210" font-family="Arial, sans-serif" font-size="18" fill="#333" text-anchor="middle">处理程序运行时可能发生的错误或异常情况</text>
+  <text x="400" y="235" font-family="Arial, sans-serif" font-size="18" fill="#333" text-anchor="middle">提高程序健壮性，防止崩溃</text>
+
+  <!-- Main Structure: try-catch-finally -->
+  <text x="400" y="290" font-family="Arial, sans-serif" font-size="22" fill="#333" text-anchor="middle" font-weight="bold">核心结构: try-catch-finally</text>
+
+  <!-- Try Block -->
+  <rect x="50" y="320" width="220" height="100" rx="8" ry="8" fill="#BBDEFB" stroke="#1976D2" stroke-width="1"/>
+  <text x="160" y="350" font-family="Arial, sans-serif" font-size="20" fill="#1976D2" text-anchor="middle" font-weight="bold">try</text>
+  <text x="160" y="380" font-family="Arial, sans-serif" font-size="16" fill="#333" text-anchor="middle">放置可能抛出异常的代码</text>
+  <text x="160" y="400" font-family="Arial, sans-serif" font-size="16" fill="#333" text-anchor="middle">(正常执行路径)</text>
+
+  <!-- Catch Block -->
+  <rect x="290" y="320" width="220" height="100" rx="8" ry="8" fill="#FFCDD2" stroke="#D32F2F" stroke-width="1"/>
+  <text x="400" y="350" font-family="Arial, sans-serif" font-size="20" fill="#D32F2F" text-anchor="middle" font-weight="bold">catch</text>
+  <text x="400" y="380" font-family="Arial, sans-serif" font-size="16" fill="#333" text-anchor="middle">捕获并处理特定类型异常</text>
+  <text x="400" y="400" font-family="Arial, sans-serif" font-size="16" fill="#333" text-anchor="middle">(可多个，按特定到通用顺序)</text>
+
+  <!-- Finally Block -->
+  <rect x="530" y="320" width="220" height="100" rx="8" ry="8" fill="#FFF9C4" stroke="#FBC02D" stroke-width="1"/>
+  <text x="640" y="350" font-family="Arial, sans-serif" font-size="20" fill="#FBC02D" text-anchor="middle" font-weight="bold">finally</text>
+  <text x="640" y="380" font-family="Arial, sans-serif" font-size="16" fill="#333" text-anchor="middle">无论是否发生异常，总会执行</text>
+  <text x="640" y="400" font-family="Arial, sans-serif" font-size="16" fill="#333" text-anchor="middle">(资源释放)</text>
+
+  <!-- Arrows between blocks -->
+  <path d="M270 370 H290" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <path d="M510 370 H530" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+  <!-- Key Points -->
+  <text x="400" y="460" font-family="Arial, sans-serif" font-size="22" fill="#333" text-anchor="middle" font-weight="bold">关键点</text>
+
+  <rect x="50" y="490" width="700" height="120" rx="8" ry="8" fill="#F3E5F5" stroke="#9C27B0" stroke-width="1"/>
+  <text x="400" y="515" font-family="Arial, sans-serif" font-size="18" fill="#333" text-anchor="middle">1. 异常层次结构: 所有异常派生自 `System.Exception`</text>
+  <text x="400" y="540" font-family="Arial, sans-serif" font-size="18" fill="#333" text-anchor="middle">2. `catch` 顺序: 特定异常在前，通用异常在后</text>
+  <text x="400" y="565" font-family="Arial, sans-serif" font-size="18" fill="#333" text-anchor="middle">3. 不捕获不处理: 避免隐藏问题</text>
+  <text x="400" y="590" font-family="Arial, sans-serif" font-size="18" fill="#333" text-anchor="middle">4. 重新抛出: `throw;` 保留堆栈信息</text>
+
+  <!-- Advanced Concepts -->
+  <text x="400" y="650" font-family="Arial, sans-serif" font-size="22" fill="#333" text-anchor="middle" font-weight="bold">高级概念</text>
+
+  <rect x="50" y="680" width="220" height="80" rx="8" ry="8" fill="#DCEDC8" stroke="#689F38" stroke-width="1"/>
+  <text x="160" y="710" font-family="Arial, sans-serif" font-size="18" fill="#689F38" text-anchor="middle" font-weight="bold">自定义异常</text>
+  <text x="160" y="735" font-family="Arial, sans-serif" font-size="16" fill="#333" text-anchor="middle">(继承 `Exception`)</text>
+
+  <rect x="290" y="680" width="220" height="80" rx="8" ry="8" fill="#CFD8DC" stroke="#607D8B" stroke-width="1"/>
+  <text x="400" y="710" font-family="Arial, sans-serif" font-size="18" fill="#607D8B" text-anchor="middle" font-weight="bold">`when` 子句</text>
+  <text x="400" y="735" font-family="Arial, sans-serif" font-size="16" fill="#333" text-anchor="middle">(条件过滤 `catch`)</text>
+
+  <rect x="530" y="680" width="220" height="80" rx="8" ry="8" fill="#E0F2F1" stroke="#00796B" stroke-width="1"/>
+  <text x="640" y="710" font-family="Arial, sans-serif" font-size="18" fill="#00796B" text-anchor="middle" font-weight="bold">`using` 语句</text>
+  <text x="640" y="735" font-family="Arial, sans-serif" font-size="16" fill="#333" text-anchor="middle">(自动资源释放)</text>
+
+  <!-- Arrowhead Definition -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#666"/>
+    </marker>
+  </defs>
+</svg>

@@ -1,0 +1,111 @@
+<svg width="800" height="850" viewBox="0 0 800 850" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#6a11cb;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2575fc;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ee9ca7;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ffdde1;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="grad3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#a1c4fd;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#c2e9fb;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="grad4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#fbc2eb;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#a6c1ee;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="grad5" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#84fab0;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#8fd3f4;stop-opacity:1" />
+    </linearGradient>
+    <style>
+      .title { font: bold 28px sans-serif; fill: #333; text-anchor: middle; }
+      .subtitle { font: 18px sans-serif; fill: #555; text-anchor: middle; }
+      .box { stroke: #ccc; stroke-width: 1; fill: #fff; border-radius: 8px; }
+      .section-title { font: bold 20px sans-serif; fill: #333; }
+      .operator-text { font: bold 16px sans-serif; fill: #007bff; }
+      .desc-text { font: 14px sans-serif; fill: #555; }
+      .example-code { font-family: 'Fira Code', 'Cascadia Code', monospace; font-size: 13px; fill: #333; }
+      .note { font: italic 12px sans-serif; fill: #888; }
+      .header-rect { fill: url(#grad1); }
+      .footer-rect { fill: url(#grad2); }
+      .box-shadow { filter: drop-shadow(3px 3px 2px rgba(0,0,0,0.2)); }
+      .priority-item { font: 14px sans-serif; fill: #444; }
+      .priority-header { font: bold 16px sans-serif; fill: #333; }
+    </style>
+  </defs>
+
+  <!-- Header -->
+  <rect x="0" y="0" width="800" height="60" class="header-rect"/>
+  <text x="400" y="35" class="title" fill="white">C# 条件运算符</text>
+
+  <!-- Section 1: 关系运算符 (Comparison Operators) -->
+  <g transform="translate(50, 80)" class="box-shadow">
+    <rect x="0" y="0" width="700" height="200" rx="10" ry="10" class="box" style="fill: url(#grad3);"/>
+    <text x="350" y="30" class="section-title">1. 关系运算符 (比较运算符)</text>
+    
+    <text x="50" y="70" class="operator-text">== (等于)</text><text x="150" y="70" class="desc-text">: 比较值</text>
+    <text x="50" y="90" class="operator-text">!= (不等于)</text><text x="150" y="90" class="desc-text">: 比较值</text>
+    <text x="50" y="110" class="operator-text">&gt; (大于)</text><text x="150" y="110" class="desc-text">: 比较大小</text>
+    <text x="50" y="130" class="operator-text">&lt; (小于)</text><text x="150" y="130" class="desc-text">: 比较大小</text>
+    <text x="50" y="150" class="operator-text">&gt;= (大于等于)</text><text x="150" y="150" class="desc-text">: 比较大小</text>
+    <text x="50" y="170" class="operator-text">&lt;= (小于等于)</text><text x="150" y="170" class="desc-text">: 比较大小</text>
+
+    <text x="400" y="70" class="example-code">int a = 10, b = 20;</text>
+    <text x="400" y="90" class="example-code">Console.WriteLine(a == b); // False</text>
+    <text x="400" y="110" class="example-code">Console.WriteLine(a &lt; b);   // True</text>
+    <text x="400" y="130" class="note">注意: 浮点数比较精度问题</text>
+    <text x="400" y="150" class="example-code">double d1 = 0.1 + 0.2;</text>
+    <text x="400" y="170" class="example-code">Console.WriteLine(Math.Abs(d1 - 0.3) &lt; 1e-10); // True</text>
+  </g>
+
+  <!-- Section 2: 空值条件运算符 (Null-Conditional Operators) -->
+  <g transform="translate(50, 300)" class="box-shadow">
+    <rect x="0" y="0" width="700" height="180" rx="10" ry="10" class="box" style="fill: url(#grad4);"/>
+    <text x="350" y="30" class="section-title">2. 空值条件运算符</text>
+    
+    <text x="50" y="70" class="operator-text">?. (空值条件)</text><text x="150" y="70" class="desc-text">: 安全访问可能为 null 的成员</text>
+    <text x="50" y="90" class="example-code">string text = null;</text>
+    <text x="50" y="110" class="example-code">int? length = text?.Length; // length 为 null</text>
+    <text x="50" y="130" class="example-code">Person p = null; string city = p?.Address?.City?.Name;</text>
+
+    <text x="400" y="70" class="operator-text">?? (空值合并)</text><text x="500" y="70" class="desc-text">: 为 null 值提供默认值</text>
+    <text x="400" y="90" class="example-code">string name = null;</text>
+    <text x="400" y="110" class="example-code">string displayName = name ?? "匿名用户"; // "匿名用户"</text>
+
+    <text x="400" y="130" class="operator-text">??= (空值合并赋值)</text><text x="550" y="130" class="desc-text">: C# 8.0, 仅当左侧为 null 时赋值</text>
+    <text x="400" y="150" class="example-code">string msg = null; msg ??= "默认"; // msg = "默认"</text>
+  </g>
+
+  <!-- Section 3: 运算符优先级 (Operator Precedence) -->
+  <g transform="translate(50, 500)" class="box-shadow">
+    <rect x="0" y="0" width="700" height="150" rx="10" ry="10" class="box" style="fill: url(#grad5);"/>
+    <text x="350" y="30" class="section-title">3. 运算符优先级 (从高到低)</text>
+    
+    <text x="50" y="70" class="priority-header">高优先级:</text>
+    <text x="50" y="90" class="priority-item">1. `!` (逻辑非)</text>
+    <text x="50" y="110" class="priority-item">2. `&lt;`, `&lt;=`, `&gt;`, `&gt;=` (关系运算符)</text>
+    <text x="50" y="130" class="priority-item">3. `==`, `!=` (相等运算符)</text>
+
+    <text x="350" y="70" class="priority-header">低优先级:</text>
+    <text x="350" y="90" class="priority-item">4. `&amp;&amp;` (逻辑与)</text>
+    <text x="350" y="110" class="priority-item">5. `||` (逻辑或)</text>
+    <text x="350" y="130" class="priority-item">6. `? :` (条件运算符)</text>
+  </g>
+
+  <!-- Section 4: 实际应用示例 (Practical Examples) -->
+  <g transform="translate(50, 670)" class="box-shadow">
+    <rect x="0" y="0" width="700" height="120" rx="10" ry="10" class="box" style="fill: url(#grad3);"/>
+    <text x="350" y="30" class="section-title">4. 实际应用示例</text>
+    
+    <text x="50" y="70" class="desc-text">- **输入验证**: `(age &lt; 18) ? "未成年" : "成年"`</text>
+    <text x="50" y="90" class="desc-text">- **安全字符串操作**: `input?.Trim()?.ToUpper() ?? "空值"`</text>
+    <text x="50" y="110" class="desc-text">- **条件赋值**: `(score &gt;= 90) ? "A" : "B"`</text>
+  </g>
+
+  <!-- Footer -->
+  <rect x="0" y="800" width="800" height="50" class="footer-rect"/>
+  <text x="400" y="830" class="subtitle" fill="white">掌握 C# 条件运算符，编写更灵活的代码</text>
+</svg>

@@ -1,0 +1,112 @@
+<svg width="800" height="700" viewBox="0 0 800 700" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#6a11cb;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2575fc;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ee9ca7;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ffdde1;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="grad3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#a1c4fd;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#c2e9fb;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="grad4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#fbc2eb;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#a6c1ee;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="grad5" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#84fab0;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#8fd3f4;stop-opacity:1" />
+    </linearGradient>
+    <style>
+      .title { font: bold 28px sans-serif; fill: #333; text-anchor: middle; }
+      .subtitle { font: 18px sans-serif; fill: #555; text-anchor: middle; }
+      .method-box { stroke: #ccc; stroke-width: 1; fill: #fff; border-radius: 8px; }
+      .method-title { font: bold 16px sans-serif; fill: #333; }
+      .method-desc { font: 14px sans-serif; fill: #666; }
+      .arrow { stroke: #666; stroke-width: 2; marker-end: url(#arrowhead); }
+      .summary-text { font: 14px sans-serif; fill: #444; }
+      .highlight { fill: #e0f7fa; stroke: #00bcd4; stroke-width: 1.5; }
+      .note { font: italic 12px sans-serif; fill: #888; }
+      .code { font-family: 'Fira Code', 'Cascadia Code', monospace; font-size: 13px; fill: #333; }
+      .header-rect { fill: url(#grad1); }
+      .footer-rect { fill: url(#grad2); }
+      .box-shadow { filter: drop-shadow(3px 3px 2px rgba(0,0,0,0.2)); }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#666" />
+    </marker>
+  </defs>
+
+  <!-- Header -->
+  <rect x="0" y="0" width="800" height="60" class="header-rect"/>
+  <text x="400" y="35" class="title" fill="white">C# 字符串拼接方法</text>
+
+  <!-- Main Content - Methods -->
+  <!-- Method 1: + Operator -->
+  <g transform="translate(50, 80)" class="box-shadow">
+    <rect x="0" y="0" width="220" height="120" rx="8" ry="8" class="method-box" style="fill: url(#grad3);"/>
+    <text x="110" y="25" class="method-title">1. `+` 运算符</text>
+    <text x="110" y="50" class="method-desc" text-anchor="middle">最直观，简单拼接</text>
+    <text x="110" y="75" class="method-desc" text-anchor="middle">创建新字符串，性能开销大</text>
+    <text x="110" y="100" class="code" text-anchor="middle">`"A" + "B"`</text>
+  </g>
+
+  <!-- Method 2: string.Concat() -->
+  <g transform="translate(290, 80)" class="box-shadow">
+    <rect x="0" y="0" width="220" height="120" rx="8" ry="8" class="method-box" style="fill: url(#grad4);"/>
+    <text x="110" y="25" class="method-title">2. `string.Concat()`</text>
+    <text x="110" y="50" class="method-desc" text-anchor="middle">显式拼接，多参数/数组</text>
+    <text x="110" y="75" class="method-desc" text-anchor="middle">内部优化，仍创建新对象</text>
+    <text x="110" y="100" class="code" text-anchor="middle">`string.Concat("A", "B")`</text>
+  </g>
+
+  <!-- Method 3: string.Format() -->
+  <g transform="translate(530, 80)" class="box-shadow">
+    <rect x="0" y="0" width="220" height="120" rx="8" ry="8" class="method-box" style="fill: url(#grad5);"/>
+    <text x="110" y="25" class="method-title">3. `string.Format()`</text>
+    <text x="110" y="50" class="method-desc" text-anchor="middle">占位符格式化</text>
+    <text x="110" y="75" class="method-desc" text-anchor="middle">可读性好，性能可接受</text>
+    <text x="110" y="100" class="code" text-anchor="middle">`string.Format("{0}", val)`</text>
+  </g>
+
+  <!-- Method 4: String Interpolation -->
+  <g transform="translate(170, 220)" class="box-shadow">
+    <rect x="0" y="0" width="220" height="120" rx="8" ry="8" class="method-box highlight" style="fill: url(#grad3);"/>
+    <text x="110" y="25" class="method-title">4. 字符串内插 (`$`) (C# 6.0+)</text>
+    <text x="110" y="50" class="method-desc" text-anchor="middle">最简洁，直接嵌入表达式</text>
+    <text x="110" y="75" class="method-desc" text-anchor="middle">可读性高，推荐用于格式化</text>
+    <text x="110" y="100" class="code" text-anchor="middle">`$"Hello {name}"`</text>
+  </g>
+
+  <!-- Method 5: StringBuilder -->
+  <g transform="translate(410, 220)" class="box-shadow">
+    <rect x="0" y="0" width="220" height="120" rx="8" ry="8" class="method-box highlight" style="fill: url(#grad4);"/>
+    <text x="110" y="25" class="method-title">5. `StringBuilder`</text>
+    <text x="110" y="50" class="method-desc" text-anchor="middle">**最高效**，可变对象</text>
+    <text x="110" y="75" class="method-desc" text-anchor="middle">适用于大量/循环拼接</text>
+    <text x="110" y="100" class="code" text-anchor="middle">`sb.Append("text")`</text>
+  </g>
+
+  <!-- Summary / Recommendations -->
+  <g transform="translate(50, 380)">
+    <rect x="0" y="0" width="700" height="250" rx="10" ry="10" class="method-box" style="fill: url(#grad5);"/>
+    <text x="350" y="30" class="method-title">总结与选择建议</text>
+
+    <text x="20" y="70" class="summary-text">
+      <tspan x="50" dy="1.2em">- 简单少量拼接: 字符串内插 (`$`) 或 `+` 运算符 (清晰方便)</tspan>
+      <tspan x="50" dy="1.5em">- 格式化输出: 字符串内插 (`$`) (首选), 其次 `string.Format()`</tspan>
+      <tspan x="50" dy="1.5em">- 大量/循环拼接: `StringBuilder` (性能最佳)</tspan>
+    </text>
+
+    <text x="350" y="200" class="note" text-anchor="middle">
+      C# `string` 是不可变的 (immutable)，每次 `+` 拼接都会创建新对象。
+    </text>
+  </g>
+
+  <!-- Footer -->
+  <rect x="0" y="650" width="800" height="50" class="footer-rect"/>
+  <text x="400" y="680" class="subtitle" fill="white">C# 字符串拼接：性能与可读性的权衡</text>
+</svg>
