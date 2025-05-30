@@ -1,0 +1,94 @@
+<svg width="900" height="800" viewBox="0 0 900 800" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .title { font: bold 28px sans-serif; fill: #333; }
+    .heading { font: bold 20px sans-serif; fill: #555; }
+    .subheading { font: bold 16px sans-serif; fill: #777; }
+    .text { font: 14px sans-serif; fill: #444; }
+    .code { font: 13px monospace; fill: #007bff; }
+    .box { stroke: #ccc; stroke-width: 1; fill: #f9f9f9; rx: 8; ry: 8; }
+    .concept-box { stroke: #6a0dad; stroke-width: 2; fill: #e6d9f2; rx: 8; ry: 8; }
+    .feature-box { stroke: #0d6a0d; stroke-width: 1; fill: #d9f2d9; rx: 5; ry: 5; }
+    .example-box { stroke: #0d0d6a; stroke-width: 1; fill: #d9d9f2; rx: 5; ry: 5; }
+    .arrow { stroke: #888; stroke-width: 2; marker-end: url(#arrowhead); fill: none; }
+  </style>
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#888" />
+    </marker>
+  </defs>
+
+  <rect x="10" y="10" width="880" height="780" class="box" />
+
+  <text x="450" y="40" text-anchor="middle" class="title">GDScript 变量概念图</text>
+
+  <!-- 1. 变量声明与赋值 -->
+  <rect x="30" y="70" width="400" height="250" class="concept-box" />
+  <text x="230" y="95" text-anchor="middle" class="heading">1. 变量声明与赋值</text>
+
+  <text x="230" y="125" text-anchor="middle" class="subheading">使用 `var` 关键字</text>
+  <rect x="40" y="140" width="380" height="60" class="example-box" />
+  <text x="230" y="160" text-anchor="middle" class="code">var player_name = "Hero"</text>
+  <text x="230" y="180" text-anchor="middle" class="code">var score = 100</text>
+
+  <text x="230" y="220" text-anchor="middle" class="subheading">1.1 类型推断</text>
+  <rect x="40" y="235" width="380" height="40" class="feature-box" />
+  <text x="230" y="260" text-anchor="middle" class="text">根据赋值自动推断类型</text>
+
+  <text x="230" y="290" text-anchor="middle" class="subheading">1.2 类型提示 (可选)</text>
+  <rect x="40" y="305" width="380" height="40" class="feature-box" />
+  <text x="230" y="330" text-anchor="middle" class="code">var player_name: String = "Hero"</text>
+
+  <!-- 2. 常量 -->
+  <rect x="470" y="70" width="400" height="150" class="concept-box" />
+  <text x="670" y="95" text-anchor="middle" class="heading">2. 常量</text>
+  <text x="670" y="125" text-anchor="middle" class="subheading">使用 `const` 关键字</text>
+  <rect x="480" y="140" width="380" height="40" class="example-box" />
+  <text x="670" y="165" text-anchor="middle" class="code">const MAX_SPEED = 100</text>
+  <rect x="480" y="185" width="380" height="40" class="feature-box" />
+  <text x="670" y="210" text-anchor="middle" class="text">值声明后不可改变</text>
+
+  <!-- 3. 变量作用域 -->
+  <rect x="30" y="360" width="400" height="250" class="concept-box" />
+  <text x="230" y="385" text-anchor="middle" class="heading">3. 变量作用域</text>
+
+  <text x="230" y="415" text-anchor="middle" class="subheading">局部变量</text>
+  <rect x="40" y="430" width="380" height="40" class="feature-box" />
+  <text x="230" y="455" text-anchor="middle" class="text">函数内部可见</text>
+
+  <text x="230" y="485" text-anchor="middle" class="subheading">成员变量</text>
+  <rect x="40" y="500" width="380" height="40" class="feature-box" />
+  <text x="230" y="525" text-anchor="middle" class="text">脚本顶层声明，所有函数可访问</text>
+
+  <text x="230" y="555" text-anchor="middle" class="subheading">`onready` 变量</text>
+  <rect x="40" y="570" width="380" height="40" class="feature-box" />
+  <text x="230" y="595" text-anchor="middle" class="text">节点进入场景树时赋值</text>
+
+  <!-- 4. 导出变量 (Export Variables) -->
+  <rect x="470" y="240" width="400" height="550" class="concept-box" />
+  <text x="670" y="265" text-anchor="middle" class="heading">4. 导出变量 (Export Variables)</text>
+
+  <text x="670" y="295" text-anchor="middle" class="subheading">使用 `export` 关键字</text>
+  <rect x="480" y="310" width="380" height="40" class="feature-box" />
+  <text x="670" y="335" text-anchor="middle" class="text">暴露给 Godot 编辑器</text>
+
+  <text x="670" y="365" text-anchor="middle" class="subheading">导出选项示例</text>
+  <rect x="480" y="380" width="380" height="380" class="example-box" />
+  <text x="670" y="400" text-anchor="middle" class="code">export var speed = 100.0</text>
+  <text x="670" y="420" text-anchor="middle" class="code">export(int) var max_health = 100</text>
+  <text x="670" y="440" text-anchor="middle" class="code">export(String, FILE, "*.tscn") var scene_path</text>
+  <text x="670" y="460" text-anchor="middle" class="code">export(Array, int) var enemy_spawn_points</text>
+  <text x="670" y="480" text-anchor="middle" class="code">export(int, "Min", "Max")</text>
+  <text x="670" y="500" text-anchor="middle" class="code">export(float, 0, 1, 0.01)</text>
+  <text x="670" y="520" text-anchor="middle" class="code">export(String, "Option1", "Option2")</text>
+  <text x="670" y="540" text-anchor="middle" class="text">...</text>
+
+  <rect x="480" y="770" width="380" height="40" class="feature-box" />
+  <text x="670" y="795" text-anchor="middle" class="text">实现数据驱动和可视化编辑</text>
+
+  <!-- Arrows for relationships -->
+  <path d="M430 180 L470 180" class="arrow" />
+  <text x="450" y="170" class="text">相关</text>
+
+  <path d="M430 480 L470 480" class="arrow" />
+  <text x="450" y="470" class="text">影响</text>
+</svg>
