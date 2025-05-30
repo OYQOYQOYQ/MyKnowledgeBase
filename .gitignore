@@ -8,3 +8,5 @@
 *.pdb
 *.ilk
 *.obj
+
+Gdscript/gdscript*
