@@ -1,9 +1,0 @@
-<svg width="220" height="160" xmlns="http://www.w3.org/2000/svg">
-  <rect x="10" y="10" width="200" height="140" fill="#f9f9f9" stroke="#bbb"/>
-  <text x="20" y="35" font-size="14" font-family="monospace">Hierarchy</text>
-  <text x="30" y="60" font-size="13" font-family="monospace">- Main Camera</text>
-  <text x="30" y="80" font-size="13" font-family="monospace">- Directional Light</text>
-  <text x="30" y="100" font-size="13" font-family="monospace">- Player</text>
-  <text x="50" y="120" font-size="13" font-family="monospace">- Weapon</text>
-  <text x="30" y="140" font-size="13" font-family="monospace">- Enemy</text>
-</svg>
